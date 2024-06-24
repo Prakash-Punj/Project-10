@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 PSD</title>
+    <meta name="description" content="10th psd project, time limit, in 3 days">
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        button{
+            cursor: pointer;
+            border: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        ul{
+            list-style: none;
+            padding: 0;
+        }
+        html{
+            font-size: 15px;
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+        body{
+            --red: #ed242e;
+            --blue: #05254d;
+            --pink: #fef6fc;
+        }
+        .col-1{
+            flex-basis: 8.33%;
+            max-width: 8.33%;
+            flex-flow: row wrap;
+            flex: 1 0 auto;
+        }
+        .col-2{
+            flex-basis: 16.66%;
+            max-width: 16.66%;
+            flex: 1 1 auto;
+        }
+        .col-3{
+            flex-basis: 25%;
+            max-width: 25%;
+            flex: 1 1 auto;
+        }
+        .col-4{
+            flex-basis: 33.33%;
+            max-width: 33.33%;
+            flex: 1 1 auto;
+        }
+        .col-6{
+            flex-basis: 50%;
+            max-width: 50%;
+            flex: 1 0 auto;
+        }
+        .col-10{
+            flex-basis: 83.33%;
+            max-width: 83.33%;
+            flex: 1 0 auto;
+            flex-flow: row wrap;
+        }
+
+        header{
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background-color: var(--red);
+            color: #fff;
+        }
+        header a{
+            line-height: 4rem;
+            color: #fff;
+        }
+        .menu nav{
+            display: flex;
+        }
+        .menu .one{
+            display: flex;
+            align-items: center;
+            place-content: center;
+            position: relative;
+        }
+        /* .menu .two{
+            position: absolute;
+            top: 21%;
+            left: 44%;
+            background-color: var(--red);
+            border-radius: 50%;
+            text-align: center;
+            padding: 2rem 1.7rem 1rem;
+            z-index: -1;
+        } */
+
+        .two li{
+            position: absolute;
+            top: 21%;
+            background-color: var(--red);
+            border-radius: 50%;
+            text-align: center;
+            padding: 2rem 1.7rem 1rem;
+            z-index: -1;
+            transform: translateX(-17%);
+        }
+        nav li{
+            margin: 0 0.3rem;
+        }
+        nav a{
+            padding: 0 0.6rem;
+        }
+
+        header .button{
+            display: none;
+            width: 45px;
+            height: 35px;
+            color: #fff; 
+            background: none; 
+            border-radius: 10px; 
+            float: right; 
+            margin-top: 3px; 
+            padding: 5px 10px; 
+            cursor: pointer;
+        }
+        header .button span{
+            display: block; 
+            height: 2px; 
+            background: #fff; 
+            margin: 4px 0;
+            width: 3rem;
+        }
+        header .button:active + .one{ display: block; }
+
+        /*---- wrap-1 ------*/
+
+        .wrap-1 .container{
+            position: relative;
+            overflow: hidden;
+            padding: 0;
+        }
+        .head_img{
+            width: 100%;
+            height: 38rem;
+            position: relative;
+            overflow: hidden;
+            margin: auto;
+            display: grid;
+            /* display: flex; */
+        }
+        .slide_1{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            display: grid;
+        }
+        .slide_1 img{
+            width: 100%;
+            height: 100%;
+        }
+        .head_img h2{
+            font-size: 3rem;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 1rem 0 0.5rem;
+            position: absolute;
+            z-index: 2;
+            top: 33%;
+            left: 0;
+            transform: translateX(14rem);
+        }
+
+        .wrap-1 .fl{
+            overflow: hidden;
+        }
+        .wrap-1 .pre, .wrap-1 .next{
+            width: 30px;
+            aspect-ratio: 1;
+            background-color: var(--red);
+            border-radius: 55%;
+            position: absolute;
+            top: 36%;
+            color: transparent;
+            padding: 0.5rem 2.5rem 0rem 2.5rem;
+            font-size: 2rem;
+            
+        }
+
+        .wrap-1 .pre::before{
+            content: "";
+            display: inline-block;
+            border: 10px solid;
+            border-color: transparent #fff transparent transparent;
+            margin: -14px -6px;
+        }
+        .wrap-1 .pre{
+            transform: translateX(-49%);
+        }
+        .wrap-1 .next{
+            transform: translateX(49%);
+            right: 0;
+        }
+        .wrap-1 .next::before{
+            content: "";
+            display: inline-block;
+            border: 10px solid;
+            border-color: transparent transparent transparent #fff;
+            margin: -13px -16px;
+        }
+
+        .btn-1{
+            position: absolute;
+            transform: translateX(15rem);
+            top: 60%;
+        }
+        .btn-read, .btn-about{
+            padding: 0.5rem 2rem;
+            background-color: var(--red);
+            font-size: 0.8rem;
+            font-weight: 100;
+            color: #fff;
+            border-radius: 3px;
+            top: 69%;
+        }
+
+        .show{
+            display: none;
+            
+        }
+        .show.block{
+            display: block;
+            color: #fff;
+            padding-bottom: 0.5rem;
+            position: absolute;
+            top: 64%;
+            left: 27%;
+        }
+
+        /* ---- banner ----*/
+        .banner{
+            display: flex;
+            align-items: center;
+            width: 80%;
+            border-radius: 50px;
+            margin: 0 auto;
+            position: relative;
+            transform: translateY(-25%);
+            background-color: #fff;
+            box-shadow: 0 0 25px var(--blue);
+        }
+        .banner h2{
+            font-size: 1.8rem;
+            font-weight: 900;
+            margin: 3rem 1rem 0 3rem;
+        }
+        .hr hr{
+            width: 3.5rem;
+            height: 7px;
+            background-color: var(--red);
+            border-radius: 10px;
+            border: none;
+            transform: translateX(86%);
+        }
+        .banner p{
+            font-size: 1rem;
+            font-weight: 300;
+            margin: 2rem 1rem 2rem 3rem;
+        }
+        .banner button{
+            background-color: var(--blue);
+            padding: 0.8rem 1.9rem;
+            border: none;
+            font-size: 0.6rem;
+            margin-left: 3rem;
+            margin-bottom: 2rem;
+            color: #fff;
+        }
+        .banner .right img{
+            width: 80%;
+            padding: 3rem;
+        }
+
+        /*------ wrap-2 ------*/
+
+        .wrap-2{
+            margin: 2rem 5rem;
+        }
+        .wrap-2 .container{
+            display: flex;
+            place-items: center;
+        }
+        .wrap-2 .left img{
+            width: 100%;
+        }
+        
+        .wrap-2 .right h2{
+            font-size: 2rem;
+            font-weight: 900;
+            margin: 5rem 1rem 1rem 1rem;
+        }
+        .wrap-2 .right p{
+            font-size: 1rem;
+            font-weight: 300;
+            margin: 1rem 4rem 1rem 1rem;
+        }
+        .btn-wrap-2{
+            margin: 1rem 0 3rem 1rem;
+            padding: 1rem 2rem;
+            font-size: 0.9rem;
+            font-weight: 700;
+            background-color: var(--blue);
+            border: none;
+            color: #fff;
+        }
+
+        /* ------ wrap-3 -----*/
+
+        .wrap-3{
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .wrap-3 h2{
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .banner-2{
+            margin: 2rem;
+            border-radius: 100px;
+            background-image: url(4-img-1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            
+        }
+        .ban-2-content{
+            display: flex;
+            place-content: center;
+            padding: 4rem 5rem 2rem;
+        }
+        .ban-2{
+            margin: 4rem 0 2rem;
+            flex: 0 1 23%;
+        }
+        .ban-2-box{
+            background-color: var(--pink);
+            border-radius: 10px;
+            margin: 1rem 0.5rem;
+            padding: 0.5rem;
+            width: 95%;
+            aspect-ratio: 1;
+        }
+        .ban-2-box img{
+            width: 3rem;
+            height: 3rem;
+            margin: 3rem 0 1rem;
+        }
+        .ban-2-box h4{
+            font-size: 0.8rem;
+            font-weight: 900;
+            line-height: 2rem;
+        }
+        .ban-2-box p{
+            line-height: 1.2rem;
+            font-size: 0.7rem;
+        }
+        .btn-w-3-b{
+            font-size: 0.6rem;
+            font-weight: 600;
+            padding: 1rem 2rem;
+            margin: 1rem;
+            color: #fff;
+            background-color: var(--blue);
+        }
+        .btn-w-3-b:hover{
+            background-color: var(--red);
+            padding: 1rem 2rem;
+        }
+
+        .fl-3{
+            position: absolute;
+            top: 98%;
+            left: 47%;
+        }
+         .pre-3, .next-3{
+            border-radius: 55%;
+            padding: 1rem 1rem;
+            background-color: #fff;
+            color: #000;
+            font-size: 1rem;
+            box-shadow: 0 0 2px;
+        }
+        .pre-3:hover, .next-3:hover{
+            background-color: var(--red);
+        }
+
+        /* ----- wrap-4 ------ */
+
+        .wrap-4{
+            text-align: center;
+            margin: 7rem 1rem;
+        }
+        .wrap-4 h2{
+            font-size: 1.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+        .wrap-4 p{
+            font-size: 0.9rem;
+            line-height: 1rem;
+            width: 60%;
+            margin: 0 auto 1rem;
+        }
+        .wrap-4-box{
+            display: flex;
+            margin: 1rem;
+        }
+        .wrap-4-box-1{
+            box-shadow: 0 0 30px #dcd0d9;
+            padding: 1rem;
+            margin: 0.5rem;
+            position: relative;
+        }
+        .w-4-img-1{
+            width: 100%;
+            height: auto;
+            position: relative;
+            margin-bottom: 1rem;
+        }
+        .btn-wrap-4{
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            position: absolute;
+            top: 22%;
+            left: 30%;
+        }
+        .wrap-4-box-1 h3{
+            font-size: 1.3rem;
+            font-weight: 900;
+        }
+        .wrap-4-box-1 p{
+            width: 100%;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        .w-4-img-4{
+            position: absolute;
+            width: 3rem;
+            height: 3rem;
+            left: 41%;
+            top: 95%;
+        }
+
+        /* ----- wrap-5 -------*/
+
+        .wrap-5{
+            margin: 5rem auto;
+            text-align: center;
+        }
+        .wrap-5 h2{
+            font-size: 1.5rem;
+            font-weight: 900;
+        }
+        .wrap-5-box{
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+            justify-content: center;
+        }
+        .w-5-box-1{
+            width: 20rem;
+            height: auto;
+            margin: 2rem 0.5rem;
+            border-radius: 5px;
+            position: relative;
+            padding: 1rem;
+            box-shadow: 0 0 15px #dcd0d9;
+        }
+        .w-5-box-1 h3{
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 3rem auto 1rem;
+        }
+        .w-5-box-1 p{
+            font-size: 0.8rem;
+            padding: 1rem;
+        }
+        .w-5-img-1{
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(207%, -45%);
+        }
+        .w-5-img-3{
+            width: 1rem;
+        }
+        
+        /*---- wrap-6 -----*/
+        .wrap-6{
+            text-align: center;
+        }
+        .wrap-6 h2{
+            font-size: 1.4rem;
+            font-weight: 900;
+        }
+        .w-6-img{
+            background-image: url(5-img-2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 2rem 0 0;
+            padding: 1rem;
+        }
+        .w-6-img input{
+            width: 65%;
+            border-radius: 30px;
+            padding: 1.2rem;
+            margin: 2rem auto 0;
+            background: transparent;
+            color: #fff;
+            display: block;
+            border: 1px solid;
+            opacity: 50%;
+            font-size: 0.6rem;
+        }
+        .btn-w-6{
+            font-size: 0.5rem;
+            font-weight: 900;
+            margin: 1rem;
+            padding: 0.9rem 3rem;
+            color: #fff;
+            background-color: var(--blue);
+            border-radius: 20px;
+        }
+
+        /* ------ footer ------*/
+
+        footer{
+            padding: 3rem 1rem 0.5rem 1rem;
+            background-color: #000;
+            color: #fff;
+        }
+        .detail{
+            display: flex;
+            text-align: left;
+            margin: 3rem 3rem 3rem 9rem;
+        }
+        .detail h3{
+            font-size: 1rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+        .detail p{
+            font-size: 0.9rem;
+            line-height: 1.3rem;
+            width: 95%;
+        }
+        
+        .detail img{
+            width: 13rem;
+        }
+        footer .resource, .about, .contact, .country{
+            margin: 1rem;
+        }
+        .hr-f{
+            width: 50%;
+            margin: 0 auto;
+            height: 2px;
+            border: none;
+            color: #fff;
+        }
+        .reserve{
+            text-align: center;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+
+
+
+        @media screen and (max-width:1220px) {
+            html{
+                font-size: 15px;
+            }
+        }
+        @media screen and (max-width:980px) {
+            html{
+                font-size: 14px;
+            }
+
+            .head_img{
+                height: 30rem;
+            }
+            .head_img h2{
+                top: 30%;
+                transform: translateX(9rem);
+            }
+            .btn-1{
+                transform: translateX(10rem);
+            }
+
+            .ban-2-content{
+                padding: 1rem;
+            }
+            .ban-2{
+                margin: 6rem 0 2rem;
+                flex: 0 1 28%;
+            }
+            .ban-2-box{
+                margin: 0 0.5rem;
+            }
+            .ban-2-box img{
+                margin: 2rem 0 1rem;
+            }
+            .fl-3{
+                left: 44%;
+            }
+
+            .btn-wrap-4{
+                font-size: 0.6rem;
+                top: 21%;
+                left: 34%;
+            }
+        }
+        @media screen and (max-width:768px) {
+            html{
+                font-size: 13px;
+            }
+            .col-t-4{
+                flex-basis: 33.33%;
+                max-width: 33.33%;
+                flex: 1 0 auto;
+            }
+            .col-t-6{
+                flex-basis: 50%;
+                max-width: 50%;
+                flex: 1 0 auto;
+            }
+            .col-t-12{
+                flex-basis: 100%;
+                max-width: 100%;
+                flex: 1 0 auto;
+            }
+
+            .menu .one{
+                display: none;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 5.3rem;
+                flex-flow: column;
+            }
+            header .button{
+                display: block;
+            }
+
+            .head_img{
+                height: 25rem;
+            }
+            .head_img h2{
+                font-size: 2.1rem;
+                top: 25%;
+                transform: translateX(6rem);
+            }
+            .btn-1{
+                transform: translateX(7rem);
+            }
+            .btn-about, .btn-read{
+                padding: 0.5rem 1.3rem;
+            }
+
+            .banner h2{
+                font-size: 1.5rem;
+                margin: 3rem 0 0 2rem;
+                letter-spacing: -2px;
+            }
+            .hr hr{
+                transform: translateX(79%);
+                width: 2.5rem;
+                height: 6px;
+            }
+            .banner p{
+                margin: 1rem 0 1rem 2rem;
+            }
+            .banner button{
+                margin-left: 2rem;
+            }
+
+            .banner .right img{
+                width: 100%;
+                padding: 1rem 2rem 1rem 0;
+            }
+
+            .wrap-2 .container{
+                flex-flow: column;
+                text-align: center;
+            }
+            .wrap-2 .right p{
+                margin: 1rem 0 1rem 0;
+            }
+            
+
+            /*---- wrap-3 ----*/
+
+            .banner-2{
+                margin: 2rem auto;
+                border-radius: 80px;
+            }
+            .ban-2-content{
+                padding: 1rem 0 1rem;
+                margin: 0 auto;
+            }
+            .ban-2{
+                margin: 4rem 0 2rem;
+                flex: 0 1 25%;
+            }
+            .ban-2-box{
+                margin: 0 auto;
+                padding: 0.5rem 0.5rem;
+                width: 90%;
+            }
+            .ban-2-box img{
+                width: 2rem;
+                height: 2rem;
+                margin: 1rem 0 0;
+            }
+            .ban-2-box h4{
+                line-height: 1rem;
+                margin: 0.3rem 0;
+            }
+            .ban-2-box p{
+                line-height: 1rem;
+            }
+            .btn-w-3-b, .btn-w-3-b:hover{
+                padding: 0.5rem 1.5rem;
+                margin: 0.5rem 0;
+            }
+
+
+            /*---- wrap-4-----*/
+
+            .wrap-4{
+                margin: 6rem auto 2rem;
+            }
+            .wrap-4 h2{
+                margin-bottom: 0.5rem;
+            }
+            .wrap-4 p{
+                width: 80%;
+            }
+            .wrap-4-box{
+                margin: 0;
+            }
+            .wrap-4-box-1{
+                padding: 0.5rem;
+                margin: 0.2rem;
+            }
+            .btn-wrap-4{
+                font-size: 0.4rem;
+                top: 19%;
+                left: 32%;
+            }
+
+            .detail{
+                flex-flow: wrap;
+                margin: 2rem auto;
+            }
+
+            .hr-f{
+                width: 90%;
+            }
+
+
+        }
+
+        @media screen and (max-width:600px) {
+            .ban-2{
+                flex: 0 1 30%;
+            }
+
+            .head_img{
+                height: 20rem;
+            }
+        }
+
+        @media screen and (max-width:460px) {
+            html{
+                font-size: 12px;
+            }
+            .col-m-12{
+                max-width: 100%;
+            }
+
+            .head_img{
+                height: 16rem;
+            }
+            .head_img h2{
+                font-size: 1.7rem;
+                top: 25%;
+                transform: translateX(4rem);
+            }
+            .btn-1{
+                transform: translateX(4rem);
+            }
+
+            .banner{
+                width: 90%;
+                transform: translateY(-5%);
+                flex-flow: column;
+                text-align: center;
+            }
+            .banner h2{
+                margin: 3rem 0 0;
+                letter-spacing: 0;
+            }
+            .banner p{
+                margin: 1rem 0;
+                padding: 0 3rem;
+            }
+            .banner button{
+                margin-left: 0rem;
+            }
+            .banner .right img{
+                width: 50%;
+                padding: 0;
+            }
+
+            .hr hr{
+                transform: translateX(430%);
+            }
+
+            .ban-2-content{
+                padding: 3rem 0 1rem;
+                overflow: hidden;
+                width: 13rem;
+                margin: 0 auto;
+            }
+            .ban-2{
+                margin: 0 1rem;
+            }
+            .ban-2-box{
+                width: 12rem;
+            }
+            .wrap-4-box{
+                flex-flow: column;
+            }
+            .wrap-4-box-1{
+                margin-top: 2rem;
+            }
+            .w-6-img input{
+                width: 90%;
+            }
+        }
+            
+        
+
+    </style>
+
+</head>
+<body>
+    
+    <header>
+        <div class="menu">
+            
+            <nav>
+                <div class="button col-t-4">
+                    <span></span><span></span><span></span>
+                </div>
+                <div class="search col-1 col-t-4"><a href="#">search</a></div>
+                <ul class="one col-10">
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#action">TAKEACTION</a></li>
+                    <li><a href="#corona">CORONA</a>
+                        <ul class="two">
+                            <li><img src="10-logo-3.png" alt="img-1"></li>
+                        </ul>
+                    </li>
+                    <li><a href="#news">NEWS</a></li>
+                    <li><a href="#doctores">DOCTORES</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+                <div class="login col-1 col-t-4"><a href="#">login</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="wrap-1">
+        <div class="container">
+            <div class="head_img">
+                <div class="slide_1">
+                    <img src="10-img-1.jpg" alt="img1" >
+                    <h2>Care early<br> Coronavirus</h2>
+                    <div class="show">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur 
+                            adipisicing elit. Laboriosam, iste!
+                        </p>
+                    </div>
+                    <div class="btn-1">
+                        <button class="btn-read">Read More</button> &nbsp;
+                        <button class="btn-about">About us</button>
+                    </div>
+                </div>
+                <div class="slide_1">
+                    <img src="/Self/k16.jpg" alt="k13" >
+                    <h2>Care early <br>Coronavirus</h2>
+                    <div class="show">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur 
+                            adipisicing elit. Laboriosam, iste!
+                        </p>
+                    </div>
+                    <button class="btn-read">Read More</button>
+                    <button class="btn-about">About us</button>
+                </div>
+                <div class="slide_1">
+                    <img src="/Self/k11.jpg" alt="k11" >
+                    <h2>Care early <br>Coronavirus</h2>
+                    <div class="show">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur 
+                            adipisicing elit. Laboriosam, iste!
+                        </p>
+                    </div>
+                    <button class="btn-read">Read More</button>
+                    <button class="btn-about">About us</button>
+                </div>
+                <div class="slide_1">
+                    <img src="/Self/k12.jpg" alt="k12" >
+                    <h2>Care early <br>Coronavirus</h2>
+                    <div class="show">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur 
+                            adipisicing elit. Laboriosam, iste!
+                        </p>
+                    </div>
+                    <button class="btn-read">Read More</button>
+                    <button class="btn-about">About us</button>
+                </div>
+            </div>
+
+            <div class="fl">
+                <a href="#" onclick="prev()" class="pre">&larr;</a>
+                <a href="#" onclick="next()" class="next">&rarr;</a>
+            </div>
+        </div>
+
+        <div class="banner">
+            <div class="left col-6 col-m-12">
+                <h2>
+                    About Corona Virus
+                </h2>
+                <div class="hr">
+                    <hr>
+                </div>
+                
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Quae, suscipit? Voluptates porro sunt in voluptatibus ad totam enim doloremque molestiae?
+                </p>
+                <button class="btn-banner">READ MORE</button>
+            </div>
+            <div class="right col-6 col-m-12">
+                <img src="1-img.png" alt="">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="wrap-2">
+        <div class="container">
+            <div class="left col-6 col-t-12">
+                <img src="10-3-img.png" alt="3-img">
+            </div>
+            <div class="right col-6 col-t-12">
+                <h2>
+                    Coronavirus <br>WHAT IT IS?
+                </h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quam ducimus iusto. 
+                    Corrupti illo voluptatibus quod totam voluptatem accusantium suscipit.
+                </p>
+                <button class="btn-wrap-2">READ MORE</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap-3">
+        <div class="container">
+            <h2>HOW TO PROTECT YOURSELF</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, 
+                incidunt. Lorem ipsum dolor sit amet.
+            </p>
+
+            <div class="banner-2">
+                <div class="ban-2-content">
+                    <div class="ban-2 col-4 col-m-12">
+                        <div class="ban-2-box">
+                            <img src="4-img-2.jpg" alt="w3-1">
+                            <h4>Wear Mask</h4>
+                            <p>Lorem ipsum dolor sit amet, 
+                                consectetur adipisicing elit. Nisi, ipsa!
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, aperiam?
+                            </p>
+                        </div>
+                        <button class="btn-w-3-b">READ MORE</button>
+                    </div>
+                    <div class="ban-2 col-4 col-m-12">
+                        <div class="ban-2-box">
+                            <img src="4-img-3.jpg" alt="w3-2">
+                            <h4>Wash Your Hands</h4>
+                            <p>Lorem ipsum dolor sit amet, 
+                                consectetur adipisicing elit. Nisi, ipsa!
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, aperiam?
+                            </p>
+                        </div>
+                        <button class="btn-w-3-b">READ MORE</button>
+                    </div>
+                    <div class="ban-2 col-4 col-m-12">
+                        <div class="ban-2-box">
+                            <img src="4-img-4.jpg" alt="w3-3">
+                            <h4>Stay at Home</h4>
+                            <p>Lorem ipsum dolor sit amet, 
+                                consectetur adipisicing elit. Nisi, ipsa!
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, aperiam?
+                            </p>
+                        </div>
+                        <button class="btn-w-3-b">READ MORE</button>
+                    </div>
+                </div>    
+            
+                <div class="fl-3">
+                    <a href="#" onclick="prev()" class="pre-3">&larr;</a>
+                    <a href="#" onclick="next()" class="next-3">&rarr;</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap-4">
+        <div class="container">
+            <h2>CORONAVIRUS CASES</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat aut, 
+                exercitationem vel ut, dolor repellat aliquid voluptatem qui 
+                laboriosam distinctio quod non dicta, corporis ad.
+            </p>
+            <div class="wrap-4-box">
+                <div class="wrap-4-box-1 col-4 col-m-12">
+                    <img src="5-img-1.jpg" alt="5-img1" class="w-4-img-1">
+                    <button class="btn-wrap-4">READ MORE</button>
+                    <h3>Cases 01</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur 
+                        vel unde ea, autem rem quos error incidunt 
+                        consectetur id dolorum quaerat quasi, dicta voluptatum fuga!
+                    </p>
+                    <img src="5-img-4.png" alt="5-img-4" class="w-4-img-4">
+                </div>
+                <div class="wrap-4-box-1 col-4 col-m-12">
+                    <img src="5-img-2.jpg" alt="5-img2" class="w-4-img-1">
+                    <button class="btn-wrap-4">READ MORE</button>
+                    <h3>Cases 02</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur 
+                        vel unde ea, autem rem quos error incidunt 
+                        consectetur id dolorum quaerat quasi, dicta voluptatum fuga!
+                    </p>
+                    <img src="5-img-4.png" alt="5-img-4" class="w-4-img-4">
+                </div>
+                <div class="wrap-4-box-1 col-4 col-m-12">
+                    <img src="5-img-3.jpg" alt="5-img3" class="w-4-img-1">
+                    <button class="btn-wrap-4">READ MORE</button>
+                    <h3>Cases 03</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur 
+                        vel unde ea, autem rem quos error incidunt 
+                        consectetur id dolorum quaerat quasi, dicta voluptatum fuga!
+                    </p>
+                    <img src="5-img-4.png" alt="5-img-4" class="w-4-img-4">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap-5">
+        <h2>
+            WHAT DOCTORS SAY..
+        </h2>
+        <div class="wrap-5-box">
+            <div class="w-5-box-1 ">
+                <h3>DR.GOLAP DEN</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Vitae impedit soluta, 
+                    suscipit sequi eveniet, molestiae sed beatae, 
+                    architecto mollitia voluptatem officia omnis in 
+                    esse qui. Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Velit saepe tempora excepturi! Ipsam, consectetur porro.
+                </p>
+                <img src="6-img-1.jpg" alt="6-img2" class="w-5-img-1">
+                <img src="6-img-3.png" alt="6-img3" class="w-5-img-3">
+            </div>
+            <div class="w-5-box-1 ">
+                <h3>DR.GOLAP DEN</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Vitae impedit soluta, 
+                    suscipit sequi eveniet, molestiae sed beatae, 
+                    architecto mollitia voluptatem officia omnis in 
+                    esse qui. Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Velit saepe tempora excepturi! Ipsam, consectetur porro.
+                </p>
+                <img src="6-img-2.jpg" alt="6-img1" class="w-5-img-1">
+                <img src="6-img-3.png" alt="6-img3" class="w-5-img-3">
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap-6">
+        <h2>
+            GET EVERY UPDATE....
+        </h2>
+        <div class="w-6-img">
+            <form action="">
+                <label>
+                    <input type="email" placeholder="YOUR EMAIL" required autocomplete="off">
+                </label>
+                <button class="btn-w-6">SUBSCRIBE NOW</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="detail">
+            <div class="resource col-3 col-t-6">
+                <h3>RESOURCES</h3>
+                <p>What we do</p>
+                <p>Media</p>
+                <p>Travel Advico</p>
+                <p>Protoction</p>
+                <p>Care</p>
+            </div>
+            <div class="about col-3 col-t-6">
+                <h3>ABOUT</h3>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur 
+                    adipisicing elit. Eaque porro quae non necessitatibus 
+                    ullam nostrum laborum praesentium temporibus libero 
+                    vero. Lorem ipsum dolor sit amet, consectetur adipisicing 
+                    elit. Eius, esse?
+                </p>
+            </div>
+            <div class="contact col-3 col-t-6">
+                <h3>CONTACT US</h3>
+                <p>Making this the list true</p>
+                <p>Call: +01 1234567890</p>
+                <p>Email:demo@gmail.com</p>
+            </div>
+            <div class="country col-3 col-t-6">
+                <h3>COUNTRYS</h3>
+                <img src="8-img.png" alt="8-img">
+            </div>
+        </div>
+        <div class="hr-f"><hr></div>
+        <div class="reserve">
+            <p>
+                &copy;2020 All Rights Reserved Designed by Free Html Templates
+            </p>
+        </div>
+    </footer>
+
+
+
+    <script>
+
+    const menu = document.querySelector(".button");
+    const nav = document.querySelector("nav");
+    const coll = document.querySelector(".one");
+
+    menu.addEventListener("click", () => {
+        menu.classList.toggle("active");
+        if(menu.classList.contains("active")){
+            coll.style.display = "block";
+        }else{
+            coll.style.display = "none";
+        }
+    });
+
+    nav.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            coll.style.display = 'none';
+            menu.classList.remove('active');
+        });
+    });
+
+
+    /* ----- image slider -------*/
+
+    const slider = document.querySelectorAll('.slide_1');
+        var counter = 0;
+        const totalS = slider.length;
+
+        slider.forEach((slides, index) => {
+            slides.style.left = `${index * 100}%`
+            slides.style.transition = '.5s';
+        })
+
+        const prev = () => {
+            counter--;
+            
+            if(counter < 0){
+                counter = totalS - 1;
+                slider.forEach((slides) => {
+                    slides.style.transition = '.9s';
+                });
+            }
+            slideImages();
+        }
+
+        const next = () => {
+            counter++;
+            slideImages();
+            if(counter >= totalS - 1){
+                counter = - 1;
+                slider.forEach((slides) => {
+                    slides.style.transition = 'none';
+                    slides.style.transition = '1s';
+                    
+                });
+            }
+        }
+
+        const slideImages = () => {
+            slider.forEach((slides) => {
+                slides.style.transform = `translateX(-${counter * 100}%)`;
+            })
+        }
+
+    </script>
+
+</body>
+</html>
